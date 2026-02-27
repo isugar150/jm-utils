@@ -1,0 +1,22 @@
+# JVM 옵션 실행 예시:
+# java -Dspring.config.location=./config/application.yml -jar app.jar
+# java -Dspring.profiles.active=prod -Duser.timezone=Asia/Seoul -jar app.jar
+# java -Xms512m -Xmx1024m -Dfile.encoding=UTF-8 -jar app.jar
+#
+# 참고:
+# -D 옵션은 JVM 시스템 프로퍼티이며 application.yml에서 직접 설정하지 않습니다.
+# 이 파일은 외부 설정값 오버라이드 용도로만 사용합니다.
+spring:
+  profiles:
+    active: prod
+  datasource:
+    url: jdbc:postgresql://YOUR_DB_HOST:5432/YOUR_DB_NAME
+    username: YOUR_DB_USERNAME
+    password: YOUR_DB_PASSWORD
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+
+logging:
+  config: file:./config/logback-prod.xml

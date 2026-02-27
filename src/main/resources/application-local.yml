@@ -1,4 +1,6 @@
 spring:
+  thymeleaf:
+    cache: false
   datasource:
     url: ${DB_URL:jdbc:postgresql://localhost:5432/utils}
     username: ${DB_USERNAME:postgres}

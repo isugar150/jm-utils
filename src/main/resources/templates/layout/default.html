@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title layout:title-pattern="$CONTENT_TITLE | Utils">Utils</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f7f9fc;
+            color: #1f2937;
+        }
+        header {
+            background: #1d4ed8;
+            color: #ffffff;
+            padding: 1rem 1.25rem;
+        }
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.5rem 1.25rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+        }
+        footer {
+            margin-top: 2rem;
+            padding: 1rem 1.25rem 2rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 style="margin: 0;">jm-utils</h1>
+</header>
+<main layout:fragment="content">
+    <p>Default content</p>
+</main>
+<footer>
+    Thymeleaf Layout Dialect Example
+</footer>
+</body>
+</html>

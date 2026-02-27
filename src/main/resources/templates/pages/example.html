@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default}">
+<head>
+    <title th:text="${page.title}">Example</title>
+</head>
+<body>
+<section layout:fragment="content" class="card">
+    <h2 th:text="${page.title}">Example Title</h2>
+    <p th:text="${page.message}">Example Message</p>
+    <p>
+        생성 시각:
+        <strong th:text="${page.generatedAt}">2026-02-27 00:00:00</strong>
+    </p>
+</section>
+</body>
+</html>
